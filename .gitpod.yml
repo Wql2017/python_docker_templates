@@ -1,0 +1,16 @@
+# List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
+tasks:
+  - name: "Install Python Requirements"
+    command: |
+      pip install -r requirements.txt
+  
+  - name: "Install Ubuntu Packages"
+    command: |
+      sudo apt-get update
+      sudo apt-get install -y mysql-client vim ip-utils-ping net-tools
+
+
+# # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+# ports:
+#   - port: 3000
+#     onOpen: open-preview
