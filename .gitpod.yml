@@ -1,5 +1,11 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
+  - name: "update sources list"
+    command: |
+     cd /etc/apt
+     sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
+     sudo apt-get update
+    
   - name: "Install Python Requirements"
     command: |
       pip install -r requirements.txt
