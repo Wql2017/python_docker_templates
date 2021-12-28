@@ -2,8 +2,9 @@
 tasks:
   - name: "update sources list"
     command: |
+     sudo apt-get update
      cd /etc/apt
-     sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
+     sudo sed -i "s/archive.ubuntu.com/mirrors.aliyun.com/g" /etc/apt/sources.list
      sudo apt-get update
     
   - name: "Install Python Requirements"
