@@ -15,7 +15,7 @@ bash test_mysql_app.sh
 cd ..
 sleep 10
 
-cd QA-app
+cd QA
 docker build -t ${flask_image} .
 sleep 10
 
