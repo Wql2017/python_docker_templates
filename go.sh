@@ -11,7 +11,7 @@ sleep 3
 docker network create ${user_defined_network}
 sleep 3
 cd database
-bash test_mysql_app.sh
+bash connect_mysql_app.sh
 cd ..
 sleep 10
 
@@ -19,7 +19,12 @@ cd QA
 docker build -t ${flask_image} .
 sleep 10
 
+docker container stop ${flask_container}
+docker container rm ${flask_container}
+sleep 7
+
 cd ..
+#当docker run flask之后，需要等待15秒的时间
 docker run --network ${user_defined_network} \
             --network-alias ${flask_network} \
             --name ${flask_container} \

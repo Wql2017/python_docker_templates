@@ -5,7 +5,7 @@ db_rootpass="123456"
 db_name="QA"
 
 mysql -u root -h ${mysql_network} -P 3306 -p${db_rootpass} -e "
-CREATE DATABASE ${db_name};
+CREATE DATABASE ${db_name} CHARACTER SET utf8mb4;
 SHOW DATABASES;
 "
 sleep 3

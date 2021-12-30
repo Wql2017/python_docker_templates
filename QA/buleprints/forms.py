@@ -28,7 +28,7 @@ class LoginForm(wtforms.Form):
 
 class QuestionForm(wtforms.Form):
     title = wtforms.StringField(validators=[length(min=3, max=100)])
-    content = wtforms.StringField(validators=[length(min=6)])
+    content = wtforms.StringField(validators=[length(min=1)])
 
 class AnswerForm(wtforms.Form):
     content = wtforms.StringField(validators=[length(min=1)])
